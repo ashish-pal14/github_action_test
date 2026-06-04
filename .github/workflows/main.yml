@@ -13,3 +13,24 @@ jobs:
 
       - name: HEllo First Steps
         run: echo "starting the day fisrt steps"
+
+      - name: Building time
+        run: echo "running build"
+
+  testing-steps:
+    needs: first-steps
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: It's testing time
+        run: echo "running the test time"
+
+  deploy-job:
+    needs: testing-steps
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: it's deploying time
+        run: echo "it's deploying things"
