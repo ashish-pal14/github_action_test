@@ -1,0 +1,15 @@
+name: testing the code
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-steps:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: HEllo First Steps
+        run: echo "starting the day fisrt steps"
