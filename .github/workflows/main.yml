@@ -35,7 +35,7 @@ jobs:
       - name: it's deploying time
         run: echo "it's deploying things"
   output:
-    needs: testing-steps
+    needs: deploy-job
     runs-on: ubuntu-latest
     steps:
       - name: Generation Version
