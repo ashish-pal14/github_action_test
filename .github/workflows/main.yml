@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generation Version
-        id: version
+        id: version1
         run: |
           echo "Build_version=v8.0.6" >> $GITHUB_OUTPUT
 
