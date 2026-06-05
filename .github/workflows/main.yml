@@ -46,5 +46,5 @@ jobs:
 
       - name: Print Version
         run: |
-          echo "${{ steps.version.outputs.build_version }}"
+          echo "${{ steps.version1.outputs.build_version }}"
           echo "$GITHUB_OUTPUT"
