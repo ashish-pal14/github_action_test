@@ -48,4 +48,4 @@ jobs:
         run: |
           echo "${{ steps.version1.outputs.build_version }}"
           echo $GITHUB_OUTPUT
-          $GITHUB_OUTPUT
+          cat $GITHUB_OUTPUT
