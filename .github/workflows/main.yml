@@ -20,3 +20,8 @@ jobs:
         with:
           name: applciation
           path: app/
+
+      - name: accesiing the artifact
+        uses: actions/download-artifact@v4
+        with: 
+          name: application
