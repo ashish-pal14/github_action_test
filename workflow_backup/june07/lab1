@@ -1,0 +1,53 @@
+name: testing the code
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-steps:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: HEllo First Steps
+        run: echo "starting the day fisrt steps"
+
+      - name: Building time
+        run: echo "running build"
+
+  testing-steps:
+    needs: first-steps
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: It's testing time
+        run: echo "running the test time"
+
+  deploy-job:
+    needs: testing-steps
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: it's deploying time
+        run: echo "it's deploying things"
+  output:
+    #needs: deploy-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generation Version
+        id: version1
+        run: |
+          echo "build_version1=v8.0.7" >> $GITHUB_OUTPUT
+          echo $GITHUB_OUTPUT
+          cat "$GITHUB_OUTPUT"
+
+      - name: Print Version
+        run: |
+          echo "${{ steps.version1.outputs.build_version1 }}"
+          echo $GITHUB_OUTPUT
+          cat "$GITHUB_OUTPUT"
+          
