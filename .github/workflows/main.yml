@@ -34,5 +34,5 @@ jobs:
       - run: |
           VERSION=v1.5.${GITHUB_RUN_NUMBER}
           echo "${{needs.output.outputs.version}}"
-          ECHO "version=$VERSION"  >> $ASHISH
+          echo "version=$VERSION"  >> $ASHISH
           echo $ASHISH
