@@ -10,7 +10,7 @@ jobs:
   output:
     #needs: deploy-job
     runs-on: ubuntu-latest
-    outputs:
+    outputs1:
       version: ${{steps.version1.outputs.build_version1}}
     steps:
       - name: Generation Version
@@ -32,4 +32,4 @@ jobs:
     needs: output
     steps:
       - run: |
-          echo "${{needs.output.outputs.version}}"
+          echo "${{needs.output.outputs1.version}}"
