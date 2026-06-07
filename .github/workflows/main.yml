@@ -18,7 +18,7 @@ jobs:
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: applciation
+          name: application
           path: app/
 
       - name: accesiing the artifact
