@@ -36,4 +36,4 @@ jobs:
           touch /tmp/ashish.${VERSION}
           echo "${{needs.output.outputs.version}}"
           echo "version=$VERSION"  >> $GITHUB_OUTPUT
-          echo $GITHUB_OUTPUT
+          cat  "$GITHUB_OUTPUT"
