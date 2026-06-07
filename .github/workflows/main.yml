@@ -11,7 +11,7 @@ jobs:
     #needs: deploy-job
     runs-on: ubuntu-latest
     outputs:
-      version: ${{steps.version1.output.build_version1}}
+      version: ${{steps.version1.outputs.build_version1}}
     steps:
       - name: Generation Version
         id: version1
