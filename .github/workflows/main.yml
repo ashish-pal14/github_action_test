@@ -27,6 +27,7 @@ jobs:
           name: application
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: accessin thr download again 
