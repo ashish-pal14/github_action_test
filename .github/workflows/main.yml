@@ -35,7 +35,7 @@ jobs:
       - name: it's deploying time
         run: echo "it's deploying things"
   output:
-    needs: deploy-job
+    #needs: deploy-job
     runs-on: ubuntu-latest
     steps:
       - name: Generation Version
@@ -46,6 +46,6 @@ jobs:
 
       - name: Print Version
         run: |
-          echo "${{ steps.version1.outputs.build_version }}"
+          echo "${{ steps.version1.outputs.build_version1 }}"
           echo $GITHUB_OUTPUT
-          cat "$GITHUB_OUTPUT"
+          
