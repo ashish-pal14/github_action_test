@@ -47,7 +47,7 @@ jobs:
       - name: createubg the version
         run: |
            VERSION=ashish.v1.3.${GITHUB_RUN_NUMBER}
-           echo "VERSION=$VERSION "  >> $GITHUB_ENV
+           echo "VERSION22=$VERSION "  >> $GITHUB_ENV
 
       - name: taking the output
-        run: echo "ashish.$VERSION.tar"
+        run: echo "ashish.$VERSION22.tar"
