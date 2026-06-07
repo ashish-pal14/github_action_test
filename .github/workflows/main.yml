@@ -39,3 +39,13 @@ jobs:
           cat  "$GITHUB_OUTPUT"
 
           echo "ashish.$VERSION"
+
+  output2:
+    needs: outpu1
+    runs-on: ubuntu-latest
+    steps:
+      - name: createubg the version
+        run:  VERSION=ashish.v1.3.${GITHUB_RUN_NUMBER}
+
+      - name: taking the output
+        run: echo "ashish.$VERSION.tar"
