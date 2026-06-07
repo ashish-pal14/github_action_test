@@ -25,3 +25,11 @@ jobs:
         uses: actions/download-artifact@v4
         with: 
           name: application
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: accessin thr download again 
+        uses: actions/download-artifact@v4
+        with: 
+          name: application
